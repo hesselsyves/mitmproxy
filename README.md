@@ -63,6 +63,7 @@ public function createClient(string $configName, array $clientConfig = []): Clie
     $prepared_config = $this->prepareClientConfig($config, $clientConfig);
 
 	// This is new:
+    $prepared_config['headers']['X-Custom-Source'] = 'your-project-name';
     $prepared_config['proxy'] = 'host.docker.internal:8888';
 
     return new Client(
