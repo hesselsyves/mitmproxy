@@ -44,7 +44,6 @@ gzip off;
 - Add this in the dockerfile
 ```
 COPY mitmproxy-ca-cert.pem /usr/local/share/ca-certificates/mitmproxy-ca-cert.crt
-COPY charles.pem /usr/local/share/ca-certificates/charles.crt
 RUN update-ca-certificates --fresh
 ```
 
