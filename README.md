@@ -13,6 +13,16 @@ Run the webui:
 ./mitmweb --listen-host 0.0.0.0 --listen-port 8888 --ssl-insecure --set anticomp=true
 ```
 
+filtering:
+```
+~h "X-Acerta-ClientID: TRX"
+```
+
+With script
+```
+./mitmweb -s ~/mitmscripts/return_503.py --listen-host 0.0.0.0 --listen-port 8888 --ssl-insecure --set anticomp=true
+```
+
 Open the options and make sure you enable these checkboxes:
 
 - Don't verify server certificates 
